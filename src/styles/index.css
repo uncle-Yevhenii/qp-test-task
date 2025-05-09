@@ -30,6 +30,8 @@
     --input-error: 1px solid #eb5757;
     --white: #ffffff;
     --bg: #6248ff;
+    --bg-opacity: 0.1;
+    --bg-rgba: rgba(98, 72, 255, 0.1);
     --accent-border: 2px solid #6248ff;
 }
 
@@ -43,8 +45,10 @@ body {
 .container {
     padding: 0 20px;
     margin: 0 auto;
-    max-width: 768px;
+    max-width: 320px;
 }
+
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -66,3 +70,64 @@ body {
     border: none;
     background-color: var(--white);
 }
+/* Header end */
+
+/* Main */
+.hero {
+    background-color: var(--bg-rgba);
+    padding: 32px 0 16px;
+}
+.hero-title {
+    max-width: 280px;
+    margin-bottom: 24px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    color: var(--font-family-color);
+}
+.hero-desc {
+    max-width: 280px;
+    margin-bottom: 32px;
+
+    font-size: 18px;
+    line-height: 167%;
+}
+.hero-btn {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 87%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: var(--button-default);
+
+    border: none;
+    border-radius: 60px;
+
+    max-width: 280px;
+    padding: 20px 75px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: var(--button-hover);
+}
+.hero-btn:active {
+    background-color: var(--button-pressed);
+}
+.hero-btn:disabled {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+}
+.hero-image {
+    display: block;
+    max-width: 100%;
+    margin-top: 32px;
+}
+/* Main end*/
