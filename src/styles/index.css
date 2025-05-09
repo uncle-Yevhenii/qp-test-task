@@ -1,57 +1,68 @@
-@import url("./reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
 @font-face {
-  font-family: "Museo Sans Cyrl";
-  src: url("/src/assets/fonts/museo-sans-cyrl-700.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Museo Sans Cyrl';
+    src: url('/src/assets/fonts/museo-sans-cyrl-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 @font-face {
-  font-family: "Museo Sans Cyrl";
-  src: url("/src/assets/fonts/museo-sans-cyrl-900.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Museo Sans Cyrl';
+    src: url('/src/assets/fonts/museo-sans-cyrl-900.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 :root {
-  --font-family: "Museo Sans Cyrl", sans-serif;
-  --second-family: "Montserrat", sans-serif;
-  --font-family-color: #333;
-  --second-family-color: #4f4f4f;
-  --form-color: #828282;
-  --button-default: #4f62f6;
-  --button-hover: #7181fc;
-  --button-pressed: #354bf4;
-  --button-disabled: #e0e0e0;
-  --input-default: 1px solid #e0e0e0;
-  --input-focus: 1px solid #828282;
-  --input-data: 1px solid #0eac00;
-  --input-error: 1px solid #eb5757;
-  --white: #ffffff;
-  --bg: #6248ff;
-  --accent-border: 2px solid #6248ff;
+    --font-family: 'Museo Sans Cyrl', sans-serif;
+    --second-family: 'Montserrat', sans-serif;
+    --font-family-color: #333;
+    --second-family-color: #4f4f4f;
+    --form-color: #828282;
+    --button-default: #4f62f6;
+    --button-hover: #7181fc;
+    --button-pressed: #354bf4;
+    --button-disabled: #e0e0e0;
+    --input-default: 1px solid #e0e0e0;
+    --input-focus: 1px solid #828282;
+    --input-data: 1px solid #0eac00;
+    --input-error: 1px solid #eb5757;
+    --white: #ffffff;
+    --bg: #6248ff;
+    --accent-border: 2px solid #6248ff;
 }
 
 body {
-  font-family: var(--second-family);
+    font-family: var(--second-family);
+    background-color: var(--white);
+    font-family: var(--second-family);
+    color: var(--second-family-color);
 }
 
-h1 {
-  font-family: var(--font-family);
-  font-weight: 900;
-  font-size: 2.5rem;
-  line-height: 3.125rem;
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 768px;
 }
-h2 {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 2.5rem;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
 }
-h3 {
-  font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2rem;
+.logo {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 107%;
+    color: var(--font-family-color);
+}
+.btn-menu {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: var(--font-family-color);
+    border: none;
+    background-color: var(--white);
 }
