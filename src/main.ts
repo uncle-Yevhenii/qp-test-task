@@ -1,10 +1,12 @@
 import Siema from 'siema';
 import reviews from './data/review.json' assert { type: 'json' };
+import faq from './data/faq.json' assert { type: 'json' };
 
 const START_INDEX = 0;
 
 const reviewRoot = document.querySelector<HTMLUListElement>('#review-root')!;
 const reviewId = document.querySelector<HTMLParagraphElement>('#review-id')!;
+const faqRoot = document.querySelector<HTMLUListElement>('#faq-root')!;
 
 reviewId.innerHTML = `${START_INDEX + 1} / ${reviews.data.length}`;
 
@@ -26,6 +28,93 @@ reviews.data.forEach((review) => {
 `;
 
     reviewRoot.appendChild(li);
+});
+
+faq.data.forEach((item) => {
+    const li = document.createElement('li');
+    li.className = 'faq-item';
+
+    li.innerHTML = `
+      <button class="faq-question" aria-expanded="false">
+        <span class="faq-question-text">${item.question}</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-content">${item.answer}</div>
+      </div>
+    `;
+
+    faqRoot.appendChild(li);
+});
+
+const closeOtherAccordions = (activeBtn: HTMLButtonElement) => {
+    const allButtons = faqRoot.querySelectorAll<HTMLButtonElement>(
+        '.faq-question[aria-expanded="true"]'
+    );
+
+    allButtons.forEach((btn) => {
+        if (btn !== activeBtn) {
+            const answer = btn.nextElementSibling as HTMLElement;
+
+            const currentHeight = answer.offsetHeight;
+            answer.style.height = `${currentHeight}px`;
+
+            answer.classList.remove('open');
+
+            setTimeout(() => {
+                answer.style.height = '0';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.querySelector('.faq-icon')!.textContent = '+';
+            }, 10);
+        }
+    });
+};
+
+faqRoot.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    const btn = target.closest<HTMLButtonElement>('.faq-question');
+
+    if (btn) {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const answer = btn.nextElementSibling as HTMLElement;
+        const answerContent = answer.querySelector('.faq-answer-content') as HTMLElement;
+
+        if (expanded) {
+            const currentHeight = answer.offsetHeight;
+            answer.style.height = `${currentHeight}px`;
+
+            answer.classList.remove('open');
+
+            setTimeout(() => {
+                answer.style.height = '0';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.querySelector('.faq-icon')!.textContent = '+';
+            }, 10);
+        } else {
+            closeOtherAccordions(btn);
+
+            btn.setAttribute('aria-expanded', 'true');
+            btn.querySelector('.faq-icon')!.textContent = '–';
+
+            answer.classList.add('measuring');
+            answerContent.style.position = 'absolute';
+            answerContent.style.visibility = 'hidden';
+            answerContent.style.display = 'block';
+
+            const answerHeight = answerContent.offsetHeight;
+
+            answerContent.style.position = '';
+            answerContent.style.visibility = '';
+            answerContent.style.display = '';
+            answer.classList.remove('measuring');
+
+            answer.style.height = '0';
+
+            answer.classList.add('open');
+
+            setTimeout(() => (answer.style.height = `${answerHeight + 24}px`), 10);
+        }
+    }
 });
 
 const siema = new Siema({
