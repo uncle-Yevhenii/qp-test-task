@@ -1,0 +1,48 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Albert Abello",
+            "img": {
+                "src1x": "src/assets/image/user-photo@1x.png",
+                "src2x": "src/assets/image/user-photo@2x.png",
+                "alt": "Albert Abello"
+            },
+            "role": "Director of Growth",
+            "review": "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market."
+        },
+        {
+            "id": 2,
+            "name": "Albert Abello",
+            "img": {
+                "src1x": "src/assets/image/user-photo@1x.png",
+                "src2x": "src/assets/image/user-photo@2x.png",
+                "alt": "Albert Abello"
+            },
+            "role": "Director of Growth",
+            "review": "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market."
+        },
+        {
+            "id": 3,
+            "name": "Albert Abello",
+            "img": {
+                "src1x": "src/assets/image/user-photo@1x.png",
+                "src2x": "src/assets/image/user-photo@2x.png",
+                "alt": "Albert Abello"
+            },
+            "role": "Director of Growth",
+            "review": "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market."
+        },
+        {
+            "id": 4,
+            "name": "Albert Abello",
+            "img": {
+                "src1x": "src/assets/image/user-photo@1x.png",
+                "src2x": "src/assets/image/user-photo@2x.png",
+                "alt": "Albert Abello"
+            },
+            "role": "Director of Growth",
+            "review": "This magical product actually works! It has radically changed the way we build our audiences. Increasing new customer sales by 6x in our most mature market."
+        }
+    ]
+}

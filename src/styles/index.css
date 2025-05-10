@@ -194,6 +194,81 @@ body {
 }
 /* Starts end */
 
+/* Review */
+.review-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+.review-picture > img {
+    max-height: 73px;
+    max-width: 73px;
+}
+.review-name {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    color: var(--font-family-color);
+}
+.review-role {
+    font-size: 16px;
+    line-height: 169%;
+    text-align: center;
+    opacity: 0.7;
+
+    margin-bottom: 24px;
+}
+.review-icon {
+    display: block;
+    width: 33px;
+    height: 27px;
+    margin: 0 auto;
+    stroke-width: 1px;
+    stroke: var(--button-default);
+}
+.review-blockquote {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: var(--font-family-color);
+
+    margin: 24px 0;
+}
+.review-btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 80px;
+}
+.review-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: var(--input-default);
+    background-color: var(--white);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px;
+    transition: all 0.3s ease;
+    color: var(--font-family-color);
+}
+.review-id {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    color: #4f62f6;
+}
 /* Contact */
 .contact {
     background-color: var(--bg-rgba);

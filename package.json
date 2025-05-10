@@ -9,8 +9,12 @@
         "preview": "vite preview"
     },
     "devDependencies": {
+        "@types/siema": "^1.4.11",
         "prettier": "3.5.3",
         "typescript": "~5.8.3",
         "vite": "^6.3.5"
+    },
+    "dependencies": {
+        "siema": "^1.5.1"
     }
 }
