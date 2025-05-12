@@ -160,13 +160,6 @@ body {
     gap: 1rem;
     padding-top: 1rem;
 }
-.language-select {
-    padding: 0.5rem;
-    border: var(--input-default);
-    border-radius: 4px;
-    background: var(--white);
-    cursor: pointer;
-}
 .drawer-signin {
     border-radius: 60px;
     padding: 13px 24px;
