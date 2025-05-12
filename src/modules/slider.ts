@@ -12,6 +12,7 @@ export function initSlider() {
         easing: 'ease-out',
         draggable: false,
         startIndex: 0,
+        loop: true,
     });
 
     buttonPrev?.addEventListener('click', () => {
