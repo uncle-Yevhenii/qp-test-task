@@ -1,10 +1,10 @@
 const faqRoot = document.querySelector<HTMLUListElement>('#faq-root')!;
+const allButtons = faqRoot.querySelectorAll<HTMLButtonElement>(
+    '.faq-question[aria-expanded="true"]'
+);
 
 export function setupFaqAccordion() {
     const closeOtherAccordions = (activeBtn: HTMLButtonElement) => {
-        const allButtons = faqRoot.querySelectorAll<HTMLButtonElement>(
-            '.faq-question[aria-expanded="true"]'
-        );
         allButtons.forEach((btn) => {
             if (btn !== activeBtn) {
                 const answer = btn.nextElementSibling as HTMLElement;

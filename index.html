@@ -184,10 +184,21 @@
                         </ul>
                     </address>
 
-                    <form class="contact-form">
-                        <input class="form-input" type="text" placeholder="Name" />
-                        <input class="form-input" type="email" placeholder="Email" />
-                        <textarea class="form-area" rows="4" placeholder="Massage"></textarea>
+                    <form id="form-root" class="contact-form">
+                        <input class="form-input" name="name" type="text" placeholder="Name" />
+                        <label class="form-error" data-for="name"></label>
+
+                        <input class="form-input" name="email" type="email" placeholder="Email" />
+                        <label class="form-error" data-for="email"></label>
+
+                        <textarea
+                            class="form-area"
+                            name="message"
+                            rows="4"
+                            placeholder="Massage..."
+                        ></textarea>
+                        <label class="form-error" data-for="message"></label>
+
                         <div class="form-btn-box">
                             <button class="form-btn" type="submit">Send</button>
                         </div>
