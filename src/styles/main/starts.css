@@ -1,0 +1,40 @@
+.starts {
+    padding: 80px 0;
+}
+.starts-item {
+    border: var(--accent-border);
+    border-radius: 30px;
+    padding: 24px;
+    max-width: 280px;
+
+    transition: all 0.3s ease;
+}
+.starts-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+.starts-item-id {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--button-default);
+
+    margin-bottom: 8px;
+}
+.starts-item:hover {
+    border-color: var(--button-hover);
+}
+.starts-item:hover .starts-item-id {
+    color: var(--button-hover);
+}
+.starts-item-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-family-color);
+
+    margin-bottom: 24px;
+}
+.starts-item-desc {
+    font-size: 18px;
+    line-height: 167%;
+}

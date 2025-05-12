@@ -1,0 +1,138 @@
+.contact {
+    background-color: var(--bg-rgba);
+    padding: 48px 0;
+}
+.contact-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    color: var(--font-family-color);
+
+    margin-bottom: 24px;
+}
+.contact-desc {
+    font-size: 18px;
+    line-height: 167%;
+
+    margin-bottom: 24px;
+}
+.contact-info {
+    margin-bottom: 48px;
+}
+.contact-info-title {
+    font-size: 16px;
+    line-height: 169%;
+
+    margin-bottom: 17px;
+}
+.contact-info-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+.info-item-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 107%;
+    color: var(--font-family-color);
+    margin-bottom: 8px;
+}
+.info-item-use {
+    font-size: 16px;
+    line-height: 169%;
+    color: var(--second-family-color);
+}
+.contact-form {
+    padding: 48px 16px;
+    background-color: var(--white);
+
+    border: var(--accent-border);
+    border-radius: 20px;
+    max-width: 280px;
+}
+.form-area,
+.form-input {
+    font-family: var(--second-family);
+    width: calc(100% - 32px - 2px);
+    margin-bottom: 24px;
+    padding: 7px 16px;
+    color: var(--second-family);
+    border: var(--input-default);
+    border-radius: 3px;
+}
+.form-input:placeholder-shown {
+    color: var(--second-family);
+}
+.form-input::placeholder {
+    color: var(--form-color);
+}
+.form-area:focus,
+.form-input:focus {
+    border: var(--input-focus);
+    outline: none;
+    outline-offset: none;
+}
+.valid {
+    border: var(--input-data);
+    margin-bottom: 24px;
+}
+.invalid {
+    border: var(--input-error);
+    margin-bottom: 8px;
+}
+.form-error {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 107%;
+    color: #eb5757;
+    display: none;
+    margin-bottom: calc(24px - 8px);
+}
+.form-area {
+    margin: 0;
+    resize: vertical;
+    min-height: calc(80px - 14px - 2px);
+}
+.form-area:placeholder-shown,
+.form-input:placeholder-shown {
+    color: var(--second-family);
+}
+.form-area::placeholder,
+.form-input::placeholder {
+    color: var(--form-color);
+}
+.form-btn-box {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-btn {
+    border-radius: 60px;
+    padding: 20px 64px;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 87%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background-color: var(--button-default);
+
+    transition: all 0.3s ease;
+}
+.form-btn:hover,
+.form-btn:focus {
+    background-color: var(--button-hover);
+}
+.form-btn:active {
+    background-color: var(--button-pressed);
+}
+.form-btn:disabled {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+:root {
+    --font-family: 'Museo Sans Cyrl', sans-serif;
+    --second-family: 'Montserrat', sans-serif;
+    --font-family-color: #333;
+    --second-family-color: #4f4f4f;
+    --form-color: #828282;
+    --button-default: #4f62f6;
+    --button-hover: #7181fc;
+    --button-pressed: #354bf4;
+    --button-disabled: #e0e0e0;
+    --input-default: 1px solid #e0e0e0;
+    --input-focus: 1px solid #828282;
+    --input-data: 1px solid #0eac00;
+    --input-error: 1px solid #eb5757;
+    --white: #ffffff;
+    --bg: #6248ff;
+    --bg-opacity: 0.1;
+    --bg-rgba: rgba(98, 72, 255, 0.1);
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    --accent-border: 2px solid #4f62f6;
+}

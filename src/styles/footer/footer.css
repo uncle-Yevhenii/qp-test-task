@@ -1,0 +1,50 @@
+.footer {
+    padding: 32px 0 46px;
+}
+.footer-logo {
+    text-align: center;
+}
+.footer-nav {
+    margin-top: 32px;
+}
+.footer-nav-list {
+    margin-bottom: 32px;
+}
+.footer-nav-list-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.footer-nav-list-item > a {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 107%;
+    color: var(--font-family-color);
+}
+.footer-titles {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 167%;
+    color: var(--font-family-color);
+
+    margin-bottom: 16px;
+}
+.footer-descs {
+    font-size: 16px;
+    line-height: 169%;
+
+    margin-bottom: 24px;
+}
+
+.footer-copyright-list {
+    margin-top: 32px;
+}
+.copyright-list-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+.copyright-list-item p {
+    font-size: 16px;
+    line-height: 169%;
+    text-align: center;
+    color: var(--second-family-color);
+}
