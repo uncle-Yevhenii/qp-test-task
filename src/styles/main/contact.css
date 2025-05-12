@@ -136,3 +136,44 @@
     background-color: var(--button-disabled);
     cursor: not-allowed;
 }
+
+@media screen and (min-width: 768px) {
+    .contact-title {
+        max-width: 508px;
+        margin-bottom: 24px;
+        font-size: 56px;
+        line-height: 118%;
+        text-align: center;
+    }
+    .contact-desc {
+        max-width: 508px;
+        margin-bottom: 32px;
+    }
+    .contact-info {
+        max-width: 508px;
+    }
+    .contact-info-title {
+        width: 508px;
+        margin-bottom: 24px;
+    }
+    .contact-form {
+        padding: 80px 42px;
+        max-width: calc(508px - 42px - 42px - 4px);
+    }
+    .form-area,
+    .form-input {
+        max-width: calc(508px - 32px - 2px);
+        font-size: 16px;
+        line-height: 162%;
+    }
+    .valid {
+        margin-bottom: 32px;
+    }
+    .invalid {
+        margin-bottom: 10px;
+    }
+    .form-error {
+        width: 508px;
+        margin-bottom: calc(24px - 10px);
+    }
+}

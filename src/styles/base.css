@@ -5,10 +5,20 @@ body {
     color: var(--second-family-color);
 }
 
+.visibility-hidden {
+    visibility: hidden;
+}
+
 .container {
     padding: 0 20px;
     margin: 0 auto;
     max-width: 320px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 .logo {
     font-family: var(--font-family);
@@ -32,4 +42,24 @@ body {
 .review-title > span,
 .starts-title > span {
     background-color: var(--bg-rgba);
+}
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+        margin: 0 auto;
+        max-width: 768px;
+    }
+    .faq-title,
+    .review-title,
+    .starts-title {
+        font-size: 56px;
+        line-height: 118%;
+    }
+    .starts-title {
+        max-width: 419px;
+    }
+    .faq-title,
+    .review-title {
+        max-width: 509px;
+    }
 }

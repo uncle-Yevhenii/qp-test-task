@@ -42,7 +42,9 @@
 
     margin: 24px 0;
 }
+
 .review-btn-box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,4 +73,28 @@
     font-size: 15px;
     text-align: center;
     color: #4f62f6;
+}
+
+@media screen and (min-width: 768px) {
+    .review-picture {
+        margin-bottom: 10px;
+    }
+    .review-blockquote {
+        max-width: 508px;
+        margin: 0 auto;
+    }
+    .review-btn.btn-prev {
+        position: absolute;
+        top: -150px;
+        left: 0;
+    }
+    .review-btn.btn-next {
+        position: absolute;
+        top: -150px;
+        right: 0;
+    }
+    .review-btn-box {
+        justify-content: center;
+        margin: 32px 0 120px;
+    }
 }
