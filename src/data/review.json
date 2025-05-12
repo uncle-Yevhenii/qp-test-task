@@ -4,8 +4,8 @@
             "id": 1,
             "name": "Albert Abello",
             "img": {
-                "src1x": "src/assets/image/user-photo@1x.png",
-                "src2x": "src/assets/image/user-photo@2x.png",
+                "src1x": "/images/user-photo@1x.png",
+                "src2x": "/images/user-photo@2x.png",
                 "alt": "Albert Abello"
             },
             "role": "Director of Growth",
@@ -15,8 +15,8 @@
             "id": 2,
             "name": "Albert Abello",
             "img": {
-                "src1x": "src/assets/image/user-photo@1x.png",
-                "src2x": "src/assets/image/user-photo@2x.png",
+                "src1x": "/images/user-photo@1x.png",
+                "src2x": "/images/user-photo@2x.png",
                 "alt": "Albert Abello"
             },
             "role": "Director of Growth",
@@ -26,8 +26,8 @@
             "id": 3,
             "name": "Albert Abello",
             "img": {
-                "src1x": "src/assets/image/user-photo@1x.png",
-                "src2x": "src/assets/image/user-photo@2x.png",
+                "src1x": "/images/user-photo@1x.png",
+                "src2x": "/images/user-photo@2x.png",
                 "alt": "Albert Abello"
             },
             "role": "Director of Growth",
@@ -37,8 +37,8 @@
             "id": 4,
             "name": "Albert Abello",
             "img": {
-                "src1x": "src/assets/image/user-photo@1x.png",
-                "src2x": "src/assets/image/user-photo@2x.png",
+                "src1x": "/images/user-photo@1x.png",
+                "src2x": "/images/user-photo@2x.png",
                 "alt": "Albert Abello"
             },
             "role": "Director of Growth",
