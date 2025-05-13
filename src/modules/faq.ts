@@ -1,65 +1,68 @@
-// const faqRoot = document.querySelector<HTMLUListElement>('#faq-root')!;
-// const allButtons = faqRoot.querySelectorAll<HTMLButtonElement>(
-//     '.faq-question[aria-expanded="true"]'
-// );
+const faqRoot = document.querySelector<HTMLUListElement>('#faq-root');
 
-// export function setupFaqAccordion() {
-//     const closeOtherAccordions = (activeBtn: HTMLButtonElement) => {
-//         allButtons.forEach((btn) => {
-//             if (btn !== activeBtn) {
-//                 const answer = btn.nextElementSibling as HTMLElement;
-//                 const currentHeight = answer.offsetHeight;
-//                 answer.style.height = `${currentHeight}px`;
-//                 answer.classList.remove('open');
-//                 setTimeout(() => {
-//                     answer.style.height = '0';
-//                     btn.setAttribute('aria-expanded', 'false');
-//                     btn.querySelector('.faq-icon')!.textContent = '+';
-//                 }, 10);
-//             }
-//         });
-//     };
+export function setupFaqAccordion() {
+  if (!faqRoot) return console.error('FAQRoot - not initialized!');
 
-//     faqRoot.addEventListener('click', (event) => {
-//         const target = event.target as HTMLElement;
-//         const btn = target.closest<HTMLButtonElement>('.faq-question');
+  const allButtons = faqRoot.querySelectorAll<HTMLButtonElement>(
+    '.faq-question[aria-expanded="true"]'
+  );
 
-//         if (btn) {
-//             const expanded = btn.getAttribute('aria-expanded') === 'true';
-//             const answer = btn.nextElementSibling as HTMLElement;
-//             const answerContent = answer.querySelector('.faq-answer-content') as HTMLElement;
+  const closeOtherAccordions = (activeBtn: HTMLButtonElement) => {
+    allButtons.forEach((btn) => {
+      if (btn !== activeBtn) {
+        const answer = btn.nextElementSibling as HTMLElement;
+        const currentHeight = answer.offsetHeight;
+        answer.style.height = `${currentHeight}px`;
+        answer.classList.remove('open');
+        setTimeout(() => {
+          answer.style.height = '0';
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('.faq-icon')!.textContent = '+';
+        }, 10);
+      }
+    });
+  };
 
-//             if (expanded) {
-//                 const currentHeight = answer.offsetHeight;
-//                 answer.style.height = `${currentHeight}px`;
-//                 answer.classList.remove('open');
-//                 setTimeout(() => {
-//                     answer.style.height = '0';
-//                     btn.setAttribute('aria-expanded', 'false');
-//                     btn.querySelector('.faq-icon')!.textContent = '+';
-//                 }, 10);
-//             } else {
-//                 closeOtherAccordions(btn);
+  faqRoot.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    const btn = target.closest<HTMLButtonElement>('.faq-question');
 
-//                 btn.setAttribute('aria-expanded', 'true');
-//                 btn.querySelector('.faq-icon')!.textContent = '–';
+    if (btn) {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const answer = btn.nextElementSibling as HTMLElement;
+      const answerContent = answer.querySelector('.faq-answer-content') as HTMLElement;
 
-//                 answer.classList.add('measuring');
-//                 answerContent.style.position = 'absolute';
-//                 answerContent.style.visibility = 'hidden';
-//                 answerContent.style.display = 'block';
+      if (expanded) {
+        const currentHeight = answer.offsetHeight;
+        answer.style.height = `${currentHeight}px`;
+        answer.classList.remove('open');
+        setTimeout(() => {
+          answer.style.height = '0';
+          btn.setAttribute('aria-expanded', 'false');
+          btn.querySelector('.faq-icon')!.textContent = '+';
+        }, 10);
+      } else {
+        closeOtherAccordions(btn);
 
-//                 const answerHeight = answerContent.offsetHeight;
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-icon')!.textContent = '–';
 
-//                 answerContent.style.position = '';
-//                 answerContent.style.visibility = '';
-//                 answerContent.style.display = '';
-//                 answer.classList.remove('measuring');
+        answer.classList.add('measuring');
+        answerContent.style.position = 'absolute';
+        answerContent.style.visibility = 'hidden';
+        answerContent.style.display = 'block';
 
-//                 answer.style.height = '0';
-//                 answer.classList.add('open');
-//                 setTimeout(() => (answer.style.height = `${answerHeight + 24}px`), 10);
-//             }
-//         }
-//     });
-// }
+        const answerHeight = answerContent.offsetHeight;
+
+        answerContent.style.position = '';
+        answerContent.style.visibility = '';
+        answerContent.style.display = '';
+        answer.classList.remove('measuring');
+
+        answer.style.height = '0';
+        answer.classList.add('open');
+        setTimeout(() => (answer.style.height = `${answerHeight + 24}px`), 10);
+      }
+    }
+  });
+}

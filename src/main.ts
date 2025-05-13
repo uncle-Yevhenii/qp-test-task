@@ -1,12 +1,12 @@
-import { renderReviews } from './modules/render';
+import { renderReviews, renderFaq } from './modules/render';
 import { initSlider } from './modules/slider';
-// import { setupFaqAccordion } from './modules/faq';
+import { setupFaqAccordion } from './modules/faq';
 // import { initForm } from './modules/form';
 import { initDrawer } from './modules/drawer';
 
 initDrawer();
 renderReviews();
 initSlider();
-// renderFaq();
-// setupFaqAccordion();
+renderFaq();
+setupFaqAccordion();
 // initForm();
