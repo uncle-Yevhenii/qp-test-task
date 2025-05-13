@@ -1,103 +1,307 @@
-.review-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 8px;
+.review {
+  position: relative;
+  padding: calc(80px / 2) 0;
 }
-.review-picture > img {
-    max-height: 73px;
-    max-width: 73px;
+.review-title {
+  max-width: 280px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--font-family-color);
+  font-size: 40px;
+  line-height: 1.1;
 }
-.review-name {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 167%;
-    text-align: center;
-    color: var(--font-family-color);
+.review-title > span {
+  background-color: var(--bg-rgba);
 }
-.review-role {
-    font-size: 16px;
-    line-height: 169%;
-    text-align: center;
-    opacity: 0.7;
-
-    margin-bottom: 24px;
-}
-.review-icon {
-    display: block;
-    width: 33px;
-    height: 27px;
-    margin: 0 auto;
-    stroke-width: 1px;
-    stroke: var(--button-default);
-}
-.review-blockquote {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    color: var(--font-family-color);
-
-    margin: 24px 0;
-}
-
 .review-btn-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 80px;
+  margin-top: 0;
 }
 .review-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--font-family-color);
+  border: var(--input-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review-btn.btn-prev {
+  z-index: 500;
+  position: absolute;
+  bottom: calc(40px / 2);
+}
+.review-btn.btn-next {
+  z-index: 500;
+  position: absolute;
+  right: 0;
+  bottom: calc(40px / 2);
+}
+.list-box > ul {
+  margin: 32px 0 39px;
+}
+.review-picture-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.review-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.review-user {
+  margin-top: 10px;
+}
+.review-name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.66667;
+  text-align: center;
+  color: var(--font-family-color);
+}
+.review-role {
+  font-size: 16px;
+  line-height: 1.6875;
+  text-align: center;
+}
+.review-icon {
+  width: 33px;
+  height: 27px;
+  color: var(--bg);
+}
+.review-blockquote {
+  text-align: center;
+  max-width: 508px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--font-family-color);
+}
+.review-id {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--bg);
+}
+.review-btn:hover,
+.review-btn:focus {
+  border-color: var(--button-hover);
+}
+.review-btn:active {
+  border-color: var(--button-pressed);
+}
+.review-btn:disabled {
+  border-color: var(--button-disabled);
+}
+@media screen and (min-width: 768px) {
+  .review {
+    position: relative;
+    padding: calc(120px / 2) 0;
+  }
+  .review-title {
+    max-width: 509px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.17857;
+    color: var(--font-family-color);
+  }
+  .review-title > span {
+    background-color: var(--bg-rgba);
+  }
+  .review-btn-box {
+    margin-top: 0;
+  }
+  .review-btn {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: var(--input-default);
-    background-color: var(--white);
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 12px;
-    transition: all 0.3s ease;
     color: var(--font-family-color);
-}
-.review-id {
+    border: var(--input-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .review-btn.btn-prev {
+    z-index: 500;
+    position: absolute;
+    bottom: calc(60px + 149px);
+  }
+  .review-btn.btn-next {
+    z-index: 500;
+    position: absolute;
+    right: 0;
+    bottom: calc(60px + 149px);
+  }
+  .list-box > ul {
+    margin: 48px 0 32px;
+  }
+  .review-picture-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .review-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .review-user {
+    margin-top: 10px;
+  }
+  .review-name {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.66667;
+    text-align: center;
+    color: var(--font-family-color);
+  }
+  .review-role {
+    font-size: 16px;
+    line-height: 1.6875;
+    text-align: center;
+  }
+  .review-icon {
+    width: 33px;
+    height: 27px;
+    color: var(--bg);
+  }
+  .review-blockquote {
+    text-align: center;
+    max-width: 508px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-family-color);
+  }
+  .review-id {
+    text-align: center;
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 15px;
-    text-align: center;
-    color: #4f62f6;
+    color: var(--bg);
+  }
+  .review-btn:hover,
+  .review-btn:focus {
+    border-color: var(--button-hover);
+  }
+  .review-btn:active {
+    border-color: var(--button-pressed);
+  }
+  .review-btn:disabled {
+    border-color: var(--button-disabled);
+  }
 }
-
-@media screen and (min-width: 768px) {
-    .review-picture {
-        margin-bottom: 10px;
-    }
-    .review-blockquote {
-        max-width: 508px;
-        margin: 0 auto;
-    }
-    .review-btn.btn-prev {
-        position: absolute;
-        top: -150px;
-        left: 0;
-    }
-    .review-btn.btn-next {
-        position: absolute;
-        top: -150px;
-        right: 0;
-    }
-    .review-btn-box {
-        justify-content: center;
-        margin: 32px 0 120px;
-    }
-    .review-icon {
-        margin-bottom: 16px;
-    }
+@media screen and (min-width: 1440px) {
+  .review {
+    padding: calc(140px / 2) 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .review-title {
+    max-width: 483px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.17857;
+    color: var(--font-family-color);
+  }
+  .review-title > span {
+    background-color: var(--bg-rgba);
+  }
+  .review-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 39px;
+  }
+  .review-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: var(--font-family-color);
+    border: var(--input-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .review-btn.btn-prev {
+    position: static;
+  }
+  .review-btn.btn-next {
+    position: static;
+  }
+  .list-box {
+    max-width: 584px;
+  }
+  .list-box > ul {
+    margin: 0 0 31px;
+  }
+  .review-item {
+    position: relative;
+    padding-left: calc(33px + 15px);
+  }
+  .review-picture-box {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 30px;
+    margin-bottom: 17px;
+  }
+  .review-name {
+    text-align: start;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.66667;
+    color: var(--font-family-color);
+  }
+  .review-role {
+    text-align: start;
+    font-size: 16px;
+    line-height: 1.6875;
+  }
+  .review-icon {
+    z-index: 500;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 33px;
+    height: 27px;
+    color: var(--bg);
+  }
+  .review-blockquote {
+    text-align: start;
+    max-width: 585px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--font-family-color);
+  }
+  .review-id {
+    text-align: start;
+    padding-left: calc(33px + 15px);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--bg);
+  }
+  .review-btn:hover,
+  .review-btn:focus {
+    border-color: var(--button-hover);
+  }
+  .review-btn:active {
+    border-color: var(--button-pressed);
+  }
+  .review-btn:disabled {
+    border-color: var(--button-disabled);
+  }
 }
